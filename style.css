@@ -1,0 +1,143 @@
+@import url(https://fonts.google.com/specimen/Red+Hat+Display);
+:root {
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Red Hat Display", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--Pale-blue);
+    background-attachment: fixed;
+}
+
+.container {
+    position: relative;
+    width: 1150px;
+    /*padding: 20px;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container .card {
+    position: relative;
+    width: 400px;
+    height: 520px;
+    background: #fff;
+    margin: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+}
+
+.container .card .header {
+    position: relative;
+    width: 100%;
+}
+
+.header img {
+    width: 100%;
+}
+
+.container .card .content {
+    position: absolute;
+    bottom: 10px;
+    page-break-after: 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+.container .card .content h1 {
+    padding: 10px 0;
+    position: relative;
+    display: inline-block;
+}
+
+.container .card .content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--Desaturated-blue);
+}
+
+.container .card .content .pricing {
+    margin: 10px auto;
+    padding: 10px;
+    background-color: var(--Very-pale-blue);
+    width: 90%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .pricing article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .pricing article img {
+    margin-right: 10px;
+}
+
+.container .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2 ease-in-out;
+}
+
+.btn-change {
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+.btn-primary {
+    position: relative;
+    display: inline-block;
+    padding: 10px 50px;
+    background: var(--Bright-blue);
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--Desaturated-blue);
+}
+
+.btn-secondary:hover {
+    color: hsl(223, 47%, 23%);
+}
+
+.btn-primary:hover,
+.btn-change:hover {
+    opacity: 0.8;
+}
